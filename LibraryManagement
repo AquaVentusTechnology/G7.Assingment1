@@ -1,0 +1,231 @@
+public static void main(String[] args) { 
+
+        Borrower.displayOptions(); 
+
+        Scanner input = new Scanner (System.in); 
+
+        int prompt; 
+
+         
+
+        System.out.println("Enter the type of borrower: "); 
+
+        int type = input.nextInt(); 
+
+        System.out.println("Name: "); 
+
+        String name = input.next(); 
+
+     
+
+        switch (type){ 
+
+            case '1': System.out.println("Staff ID: "); 
+
+                      int staffID = input.nextInt(); 
+
+                      Staff staff = new Staff (staffID); 
+
+            break; 
+
+            case '2': System.out.println("Student ID: "); 
+
+                      int studentID = input.nextInt(); 
+
+                      System.out.println("Status: "); 
+
+                      String status = input.next(); 
+
+                       
+
+        } 
+
+         
+
+        System.out.println("Faculty: "); 
+
+        String faculty = input.next(); 
+
+        System.out.println("Num. of Books Borrow: "); 
+
+        int numOfBorrowedBooks = input.nextInt(); 
+
+        System.out.println("Days Borrowed: "); 
+
+        int daysBorrowed = input.nextInt(); 
+
+         
+
+        Borrower borrower = new Borrower (name, faculty); 
+
+         
+
+    } 
+
+     
+
+} 
+
+Page Break
+ 
+
+Borrower (class) 
+
+/* 
+
+ * To change this license header, choose License Headers in Project Properties. 
+
+ * To change this template file, choose Tools | Templates 
+
+ * and open the template in the editor. 
+
+ */ 
+
+package cb15022_hot_2; 
+
+ 
+
+/** 
+
+ * 
+
+ * @author fskkpump 
+
+ */ 
+
+public class Borrower { 
+
+    private String name; 
+
+    private String faculty; 
+
+    private int numOfBorrowedBooks; 
+
+    private int daysBorrowed; 
+
+     
+
+    public Borrower(String n, String fac){ 
+
+        name = n; 
+
+        faculty = fac; 
+
+    } 
+
+     
+
+    public String toString(){ 
+
+        return name + faculty; 
+
+    } 
+
+     
+
+    public int getBorrowerType(){ 
+
+        return borrowerType; 
+
+    } 
+
+     
+
+     
+
+    public String getName(){ 
+
+        return name; 
+
+    } 
+
+     
+
+    public int getNumOfBorrowedBooks(){ 
+
+        return numOfBorrowedBooks; 
+
+    } 
+
+     
+
+    public String getFaculty() { 
+
+        return faculty; 
+
+    } 
+
+     
+
+    public int getDaysBorrowed() { 
+
+        return daysBorrowed; 
+
+    } 
+
+     
+
+    public static void displayOptions() { 
+
+        System.out.println("**Borrower Type**"); 
+
+        System.out.println("1. Staff"); 
+
+        System.out.println("2. Student"); 
+
+    } 
+
+     
+
+} 
+
+Page Break
+ 
+
+Staff (class) 
+
+/* 
+
+ * To change this license header, choose License Headers in Project Properties. 
+
+ * To change this template file, choose Tools | Templates 
+
+ * and open the template in the editor. 
+
+ */ 
+
+package cb15022_hot_2; 
+
+ 
+
+/** 
+
+ * 
+
+ * @author fskkpump 
+
+ */ 
+
+public class Staff { 
+
+    private int staffID; 
+
+     
+
+    public Staff (int s){ 
+
+        staffID = s; 
+
+    } 
+
+     
+
+    public int toint(){ 
+
+        return staffID; 
+
+    } 
+
+     
+
+} 
