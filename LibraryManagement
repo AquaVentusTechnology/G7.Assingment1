@@ -17,6 +17,7 @@ public static void main(String[] args) {
         String name = input.next(); 
 
      
+/*this is a change made in here*/
 
         switch (type){ 
 
